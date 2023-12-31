@@ -10550,8 +10550,8 @@ html.boxed body {
 	position: relative;
 	display: inline-block;
 	overflow: hidden;
-	font-size: 320px;
-	line-height: 85%;
+	font-size: 260px;
+	line-height: 105%;
 	font-weight: 600;
 	font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 	color: #151515;
