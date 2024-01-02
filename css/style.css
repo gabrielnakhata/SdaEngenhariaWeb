@@ -652,7 +652,7 @@ a[href*='tel'], a[href*='mailto'] {
 	height: 100%;
 	left: 15px;
 	right: 15px;
-	background: #d7d7d7;
+	background: #ef8300;
 	transition: all .3s ease;
 }
 
@@ -662,7 +662,7 @@ a[href*='tel'], a[href*='mailto'] {
 	height: 100%;
 	left: 50%;
 	right: 50%;
-	background: #a3b8ff;
+	background: #2a2d47;
 	transition: all .3s ease;
 }
 
@@ -6340,7 +6340,7 @@ textarea.textarea-lg {
 }
 
 .thumbnail-classic-title a:hover {
-	color: rgba(102, 137, 255, 0.5);
+	color: #2a2d47;
 }
 
 .thumbnail-classic-text {
@@ -9908,7 +9908,7 @@ h2.title-modern > span {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-color: rgba(17, 17, 17, 0.5);
+	background-color: #ef83001d;
 	transform: skew(10deg);
 	transform-origin: 50% 100%;
 	z-index: -1;
@@ -9923,7 +9923,7 @@ h2.title-modern > span {
 }
 
 .team-classic-name a:hover {
-	color: #a3b8ff;
+	color: #ef8300;
 }
 
 .team-classic-status {
