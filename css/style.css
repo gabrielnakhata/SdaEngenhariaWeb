@@ -12449,7 +12449,7 @@ html:not(.lt-ie10) .not-animated {
 	font-size: 20px;
 	line-height: 38px;
 	color: #ffffff;
-	background: #ef8300;
+	background: #2a2d47;
 	overflow: hidden;
 	text-align: center;
 	text-decoration: none;
@@ -12459,7 +12459,7 @@ html:not(.lt-ie10) .not-animated {
 
 .ui-to-top:hover {
 	color: #ffffff;
-	background: #111111;
+	background: #ef8300;
 	text-decoration: none;
 }
 
@@ -12467,14 +12467,82 @@ html:not(.lt-ie10) .not-animated {
 	color: #ffffff;
 }
 
+.ui-to-top-whats {
+	position: fixed;
+	z-index: 100;
+	width: 40px;
+	bottom: 188px;
+	right: 15px;
+	height: 40px;
+	font-size: 28px;
+	line-height: 38px;
+	color: #ffffff;
+	background: #25D366;
+	overflow: hidden;
+	text-align: center;
+	text-decoration: none;
+	transition: .45s all ease-in-out;
+	transform: translate3d(0, 100px, 0);
+}
+
+.ui-to-top-whats:hover {
+	color: #ffffff;
+	background: #619d31;
+	text-decoration: none;
+}
+
+.ui-to-top-whats:focus {
+	color: #ffffff;
+}
+
+/* .whatsapp-link {
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	bottom: 90px;
+	right: 14px;
+	background-color: #25D366;
+	color: #fff;
+	border-radius: 50px;
+	text-align: center;
+	font-size: 30px;
+	box-shadow: 1px 1px 2px #888;
+	z-index: 1000;
+  }
+  
+  .whatsapp-link::before {
+	content: "";
+	position: absolute;
+	width: 55px; 
+	height: 55px; 
+	border: 1px solid #fff; 
+	border-radius: 50%;
+	top: 50%; 
+	left: 50%; 
+	transform: translate(-50%, -50%);
+  }
+  
+  .fa-whatsapp {
+	margin-top: 14px;
+  } */
+
 .ui-to-top.active {
 	transform: translate3d(0, 0, 0);
 }
 
-html.mobile .ui-to-top,
+/* .ui-to-top-whats.active {
+	transform: translate3d(0, 0, 0);
+} */
+
+html.mobile .ui-to-top
 html.tablet .ui-to-top {
 	display: none !important;
 }
+
+/* html.mobile .ui-to-top-whats
+html.tablet .ui-to-top-whats {
+	display: none !important;
+} */
 
 @media (min-width: 768px) {
 	.ui-to-top {
@@ -12484,12 +12552,23 @@ html.tablet .ui-to-top {
 		right: 30px;
 		bottom: 30px;
 	}
+	/* .ui-to-top-whats {
+		width: 50px;
+		height: 50px;
+		line-height: 46px;
+		right: 30px;
+		bottom: 30px;
+	} */
+	
 }
 
 @media (min-width: 1600px) {
 	.ui-to-top {
 		right: 12px;
 	}
+	/* .ui-to-top-whats {
+		right: 12px;
+	} */
 }
 
 /*
