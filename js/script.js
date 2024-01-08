@@ -1472,21 +1472,16 @@ function chamarWhatsApp() {
     var whatsappLink = document.querySelector('.ui-to-top-whats.fa-brands.fa-whatsapp');
 
     if (isMobile) {
-        // Se for um dispositivo móvel, use o protocolo whatsapp://
-        var elemento = document.querySelector('.ui-to-top-whats.fa-brands.fa-whatsapp').href = 'whatsapp://send?phone=5531975030024';
+        var whatsappLink = document.querySelector('.ui-to-top-whats.fa-brands.fa-whatsapp').href = 'whatsapp://send?phone=5531975030024';
     } else {
-        // Se não for um dispositivo móvel, use a versão web do WhatsApp
         var elemento = document.querySelector('.ui-to-top-whats.fa-brands.fa-whatsapp').href = 'https://web.whatsapp.com/send?phone=5531975030024';
     }
 	whatsappLink.target = '_blank';
 }
 
-// Aguarde até que o DOM esteja totalmente carregado
 document.addEventListener("DOMContentLoaded", function() {
-    // Encontre o elemento pelo nome da classe
     var elemento = document.querySelector('.ui-to-top-whats.fa-brands.fa-whatsapp');
 
-    // Se o elemento existir, adicione um ouvinte de evento de clique a ele
     if (elemento) {
         elemento.addEventListener('click', function() {
             chamarWhatsApp();
