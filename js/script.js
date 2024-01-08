@@ -796,7 +796,7 @@
 		}
 
 		// UI To Tops
-		if ( isDesktop && !isNoviBuilder) {
+		if ( isMobile || isDesktop && !isNoviBuilder) {
 			$().UItoTop( {
 				easingType:     'easeOutQuad',
 				containerClass: 'ui-to-top-whats fa-brands fa-whatsapp'
@@ -804,7 +804,7 @@
 			// chamarWhatsApp();
 		}
 
-		if (isDesktop || isMobile && !isNoviBuilder) {
+		if (isMobile && isDesktop && !isNoviBuilder) {
 			chamarWhatsApp();
 		}
 
