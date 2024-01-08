@@ -801,12 +801,12 @@
 				easingType:     'easeOutQuad',
 				containerClass: 'ui-to-top-whats fa-brands fa-whatsapp'
 			} );
-			// chamarWhatsApp();
-		}
-
-		if (isMobile || isDesktop && !isNoviBuilder) {
 			chamarWhatsApp();
 		}
+
+		// if (isMobile || isDesktop && !isNoviBuilder) {
+		// 	chamarWhatsApp();
+		// }
 
 		// lightGallery
 		if (plugins.lightGallery.length) {
