@@ -804,7 +804,7 @@
 			// chamarWhatsApp();
 		}
 
-		if (isMobile && isDesktop && !isNoviBuilder) {
+		if (isMobile || isDesktop && !isNoviBuilder) {
 			chamarWhatsApp();
 		}
 
