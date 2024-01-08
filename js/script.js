@@ -796,7 +796,7 @@
 		}
 
 		// UI To Tops
-		if ( isMobile || isDesktop && !isNoviBuilder) {
+		if ( !isNoviBuilder) {
 			$().UItoTop( {
 				easingType:     'easeOutQuad',
 				containerClass: 'ui-to-top-whats fa-brands fa-whatsapp'
@@ -1463,8 +1463,6 @@
 
 	} );
 }());
-
-
 
 function chamarWhatsApp() {
     // Verifica se o dispositivo é móvel
