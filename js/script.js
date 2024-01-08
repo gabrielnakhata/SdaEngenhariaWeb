@@ -1472,7 +1472,7 @@ function chamarWhatsApp() {
     var whatsappLink = document.querySelector('.ui-to-top-whats.fa-brands.fa-whatsapp');
 
     if (isMobile) {
-        var whatsappLink = document.querySelector('.ui-to-top-whats.fa-brands.fa-whatsapp').href = 'whatsapp://send?phone=5531975030024';
+        var elemento = document.querySelector('.ui-to-top-whats.fa-brands.fa-whatsapp').href = 'https://wa.me/5531975030024';
     } else {
         var elemento = document.querySelector('.ui-to-top-whats.fa-brands.fa-whatsapp').href = 'https://web.whatsapp.com/send?phone=5531975030024';
     }
