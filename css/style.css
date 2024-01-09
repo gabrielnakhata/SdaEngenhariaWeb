@@ -12499,52 +12499,55 @@ html:not(.lt-ie10) .not-animated {
 
 .whatsapp-link {
 	position: fixed;
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 50px;
 	bottom: 90px;
 	right: 14px;
 	background-color: #25D366;
 	color: #fff;
-	border-radius: 50px;
+	border-radius: 0px;
 	text-align: center;
 	font-size: 30px;
 	box-shadow: 1px 1px 2px #888;
 	z-index: 1000;
+    align-items: center;
+    justify-content: center;
   }
   
   .whatsapp-link::before {
 	content: "";
 	position: absolute;
-	width: 55px; 
-	height: 55px; 
-	border: 1px solid #fff; 
-	border-radius: 50%;
+	color:#00aced;
+	width: 46px; 
+	height: 46px; 
+	border: 2px solid #fff; 
+	/* border-radius: 50%; */
 	top: 50%; 
 	left: 50%; 
 	transform: translate(-50%, -50%);
   }
   
   .fa-whatsapp {
-	margin-top: 14px;
+	margin-top: 8px;
+	font-style: normal;
   }
+
+  .whatsapp-link:hover::before {
+    color: #fff;
+  }
+
+  /* .whatsapp-link:hover .fa-whatsapp {
+    color: #fff; 
+  }	 */
 
 .ui-to-top.active {
 	transform: translate3d(0, 0, 0);
 }
 
-/* .ui-to-top-whats.active {
-	transform: translate3d(0, 0, 0);
-} */
-
 html.mobile .ui-to-top
 html.tablet .ui-to-top {
 	display: none !important;
 }
-
-/* html.mobile .ui-to-top-whats
-html.tablet .ui-to-top-whats {
-	display: none !important;
-} */
 
 @media (min-width: 768px) {
 	.ui-to-top {
@@ -12554,23 +12557,12 @@ html.tablet .ui-to-top-whats {
 		right: 30px;
 		bottom: 30px;
 	}
-	/* .ui-to-top-whats {
-		width: 50px;
-		height: 50px;
-		line-height: 46px;
-		right: 30px;
-		bottom: 30px;
-	} */
-	
 }
 
 @media (min-width: 1600px) {
 	.ui-to-top {
 		right: 12px;
 	}
-	/* .ui-to-top-whats {
-		right: 12px;
-	} */
 }
 
 /*
