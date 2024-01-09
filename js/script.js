@@ -795,17 +795,17 @@
 			} );
 		}
 
-		if (isMobile || isDesktop && !isNoviBuilder) {
-			$().UItoTop( {
-				easingType:     'easeOutQuad',
-				containerClass: 'ui-to-top-whats fa-brands fa-whatsapp'
-			} );
-			chamarWhatsApp(isMobile);
-		}
-//ajuste
-		if (isMobile && !isNoviBuilder) {
-			chamarWhatsApp(isMobile);
-		}
+// 		if (isMobile || isDesktop && !isNoviBuilder) {
+// 			$().UItoTop( {
+// 				easingType:     'easeOutQuad',
+// 				containerClass: 'ui-to-top-whats fa-brands fa-whatsapp'
+// 			} );
+// 			chamarWhatsApp(isMobile);
+// 		}
+// //ajuste
+// 		if (isMobile && !isNoviBuilder) {
+// 			chamarWhatsApp(isMobile);
+// 		}
 
 		// lightGallery
 		if (plugins.lightGallery.length) {
@@ -887,7 +887,6 @@
 					responsiveNavbar[ values[ i ] ][ 'stickUpOffset' ] = plugins.rdNavbar.attr( 'data' + aliaces[ i ] + 'stick-up-offset' );
 				}
 			}
-
 
 			plugins.rdNavbar.RDNavbar( {
 				anchorNav:    !isNoviBuilder,
@@ -1487,3 +1486,17 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Elemento com a classe 'ui-to-top-whats fa-brands fa-whatsapp' não encontrado!");
     }
 });
+
+function chamarWhatsApp() {
+	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  
+	// Verifica se o dispositivo é móvel
+	if (isMobile) {
+	  document.getElementById('whatsapp-link').href = 'https://wa.me/5531975030024';
+	} else {
+	  document.getElementById('whatsapp-link').href = 'https://web.whatsapp.com/send?phone=5531975030024';
+	}
+  }
+  
+  // Chame a função para configurar o link do WhatsApp
+  chamarWhatsApp();

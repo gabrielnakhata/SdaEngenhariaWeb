@@ -12467,7 +12467,7 @@ html:not(.lt-ie10) .not-animated {
 	color: #ffffff;
 }
 
-.ui-to-top-whats {
+/* .ui-to-top-whats {
 	position: fixed;
 	z-index: 100;
 	width: 40px;
@@ -12493,9 +12493,11 @@ html:not(.lt-ie10) .not-animated {
 
 .ui-to-top-whats:focus {
 	color: #ffffff;
-}
+} */
 
-/* .whatsapp-link {
+/* rr whatbtn */
+
+.whatsapp-link {
 	position: fixed;
 	width: 60px;
 	height: 60px;
@@ -12524,7 +12526,7 @@ html:not(.lt-ie10) .not-animated {
   
   .fa-whatsapp {
 	margin-top: 14px;
-  } */
+  }
 
 .ui-to-top.active {
 	transform: translate3d(0, 0, 0);
@@ -12534,10 +12536,10 @@ html:not(.lt-ie10) .not-animated {
 	transform: translate3d(0, 0, 0);
 } */
 
-/* html.mobile .ui-to-top
+html.mobile .ui-to-top
 html.tablet .ui-to-top {
 	display: none !important;
-} */
+}
 
 /* html.mobile .ui-to-top-whats
 html.tablet .ui-to-top-whats {
