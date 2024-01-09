@@ -804,9 +804,9 @@
 			chamarWhatsApp(isMobile);
 		}
 
-		// if (isMobile || isDesktop && !isNoviBuilder) {
-		// 	chamarWhatsApp();
-		// }
+		if (isMobile || isDesktop && !isNoviBuilder) {
+			chamarWhatsApp(isMobile);
+		}
 
 		// lightGallery
 		if (plugins.lightGallery.length) {
