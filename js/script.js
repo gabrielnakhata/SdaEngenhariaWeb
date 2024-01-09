@@ -801,7 +801,7 @@
 				easingType:     'easeOutQuad',
 				containerClass: 'ui-to-top-whats fa-brands fa-whatsapp'
 			} );
-			chamarWhatsApp();
+			chamarWhatsApp(isMobile);
 		}
 
 		// if (isMobile || isDesktop && !isNoviBuilder) {
@@ -1464,9 +1464,9 @@
 	} );
 }());
 
-function chamarWhatsApp() {
+function chamarWhatsApp(isMobile) {
     // Verifica se o dispositivo é móvel
-    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    // var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     var whatsappLink = document.querySelector('.ui-to-top-whats.fa-brands.fa-whatsapp');
 
     if (isMobile) {
