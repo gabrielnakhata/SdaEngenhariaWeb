@@ -800,10 +800,10 @@
 				easingType:     'easeOutQuad',
 				containerClass: 'ui-to-top-whats fa-brands fa-whatsapp'
 			} );
-			// chamarWhatsApp(isMobile);
+			chamarWhatsApp(isMobile);
 		}
-
-		if (isMobile || isDesktop && !isNoviBuilder) {
+//ajuste
+		if (isMobile && !isNoviBuilder) {
 			chamarWhatsApp(isMobile);
 		}
 
