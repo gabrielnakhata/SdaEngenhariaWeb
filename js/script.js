@@ -796,7 +796,7 @@
 		}
 
 		// UI To Tops
-		if ( !isNoviBuilder) {
+		if (isMobile || isDesktop && !isNoviBuilder) {
 			$().UItoTop( {
 				easingType:     'easeOutQuad',
 				containerClass: 'ui-to-top-whats fa-brands fa-whatsapp'
