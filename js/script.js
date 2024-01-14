@@ -1500,3 +1500,15 @@ function chamarWhatsApp() {
   
   // Chame a função para configurar o link do WhatsApp
   chamarWhatsApp();
+
+  function changeButtonColor(button) {
+
+	  button.addEventListener('click', function() {
+        setTimeout(function() {
+            if (button.classList.contains('collapsed')) {
+                button.style.backgroundColor = '#fff';
+                button.style.color = '';
+            }
+        }, 300); // Temporizador para esperar a transição do accordion
+    });
+}
