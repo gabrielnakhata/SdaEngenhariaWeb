@@ -1312,7 +1312,7 @@
 
 		// Material Parallax
 		if ( plugins.materialParallax.length ) {
-			if ( !isNoviBuilder && !isIE && !isMobile ) {
+			if ( !isNoviBuilder) {
 				plugins.materialParallax.parallax();
 
 				// heavy pages fix
