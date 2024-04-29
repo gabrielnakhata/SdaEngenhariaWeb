@@ -1512,3 +1512,50 @@ function chamarWhatsApp() {
         }, 300); // Temporizador para esperar a transição do accordion
     });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+	const form = document.querySelector("form.rd-mailform");
+	const nameInput = document.querySelector("#contact-your-name-2");
+	const phoneInput = document.querySelector("#contact-phone-2");
+	const messageInput = document.querySelector("#contact-message-2");
+  
+	form.addEventListener("submit", function (e) {
+	  e.preventDefault(); // Impede o envio imediato do formulário
+  
+	  const name = nameInput.value.trim();
+	  const phone = phoneInput.value.trim();
+  
+	  if (name || phone) {
+		const messagePrefix = `Nome: ${name || "N/A"}\nTelefone: ${phone || "N/A"}\n\n`;
+		messageInput.value = messagePrefix + messageInput.value;
+	  }
+  
+	  // Limpa os campos de nome e telefone
+	  nameInput.value = "";
+	  phoneInput.value = "";
+  
+	  // Cria um novo formulário temporário para enviar apenas email e mensagem
+	  const tempForm = document.createElement("form");
+	  tempForm.action = form.action;
+	  tempForm.method = form.method;
+  
+	  // Adiciona o campo de email ao formulário temporário
+	  const emailInput = document.createElement("input");
+	  emailInput.type = "email";
+	  emailInput.name = "email";
+	  emailInput.value = form.querySelector("#contact-email-2").value;
+	  tempForm.appendChild(emailInput);
+  
+	  // Adiciona o campo de mensagem ao formulário temporário
+	  const messageTextarea = document.createElement("textarea");
+	  messageTextarea.name = "Enviar";
+	  messageTextarea.value = messageInput.value;
+	  tempForm.appendChild(messageTextarea);
+  
+	  // Adiciona o formulário temporário ao DOM para submeter
+	  document.body.appendChild(tempForm);
+	  tempForm.submit(); // Envia o formulário temporário
+	  document.body.removeChild(tempForm); // Remove após o envio
+	});
+  });
+  
