@@ -1515,12 +1515,19 @@ function chamarWhatsApp() {
 
 document.addEventListener("DOMContentLoaded", function () {
 	const form = document.querySelector("form.rd-mailform");
+	const emailInput = document.querySelector("#contact-email-2");
+	const messageInput = document.querySelector("#contact-message-2");
 	const nameInput = document.querySelector("#contact-your-name-2");
 	const phoneInput = document.querySelector("#contact-phone-2");
-	const messageInput = document.querySelector("#contact-message-2");
   
 	form.addEventListener("submit", function (e) {
-	  e.preventDefault(); // Impede o envio imediato do formulário
+	  e.preventDefault(); // Impede o envio imediato do formulário original
+  
+	  // Verifica se os campos obrigatórios (email e mensagem) estão preenchidos
+	  if (!emailInput.value || !messageInput.value) {
+		alert("Por favor, preencha os campos obrigatórios (E-mail e Mensagem) antes de enviar.");
+		return; // Interrompe o envio se faltar um dos campos
+	  }
   
 	  const name = nameInput.value.trim();
 	  const phone = phoneInput.value.trim();
@@ -1540,17 +1547,17 @@ document.addEventListener("DOMContentLoaded", function () {
 	  tempForm.method = form.method;
   
 	  // Adiciona o campo de email ao formulário temporário
-	  const emailInput = document.createElement("input");
-	  emailInput.type = "email";
-	  emailInput.name = "email";
-	  emailInput.value = form.querySelector("#contact-email-2").value;
-	  tempForm.appendChild(emailInput);
+	  const tempEmailInput = document.createElement("input");
+	  tempEmailInput.type = "email";
+	  tempEmailInput.name = "email";
+	  tempEmailInput.value = emailInput.value;
+	  tempForm.appendChild(tempEmailInput);
   
 	  // Adiciona o campo de mensagem ao formulário temporário
-	  const messageTextarea = document.createElement("textarea");
-	  messageTextarea.name = "Enviar";
-	  messageTextarea.value = messageInput.value;
-	  tempForm.appendChild(messageTextarea);
+	  const tempMessageTextarea = document.createElement("textarea");
+	  tempMessageTextarea.name = "message";
+	  tempMessageTextarea.value = messageInput.value;
+	  tempForm.appendChild(tempMessageTextarea);
   
 	  // Adiciona o formulário temporário ao DOM para submeter
 	  document.body.appendChild(tempForm);
@@ -1558,4 +1565,4 @@ document.addEventListener("DOMContentLoaded", function () {
 	  document.body.removeChild(tempForm); // Remove após o envio
 	});
   });
-  
+
